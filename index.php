@@ -6,7 +6,7 @@ require_once('functions.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <Title>WorldRide</Title>
+    <Title>Rollercoasters</Title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -14,15 +14,10 @@ require_once('functions.php');
 </head>
 
 <body>
+
 <nav class="nav-bar">
-    <div>
-        <img src="drawing.svg"/>
-    </div>
-    <div>
-        <h1>WorldRide</h1>
-    </div>
-    <div class="add-new">
-        <a href="new-entry.php">+</a>
+    <h1>Rollercoasters of the World</h1>
+    <a href="new-entry.php">Add coaster <i class="fas fa-plus-circle"></i></a>
     </div>
 </nav>
 

@@ -4,7 +4,8 @@ function fetchDB(PDO $db): array {
     $query = $db->prepare("SELECT `rides`.`name`, `rides`.`img`, `rides`.`height`, `rides`.`inversions`, `themeparks`.`park`
                                 FROM `rides` 
                                 LEFT JOIN `themeparks` 
-                                ON `rides`.`location` = `themeparks`.`id`;");
+                                ON `rides`.`location` = `themeparks`.`id`
+                                ORDER BY `rides`.`name`;");
 
     $query->execute();
 
@@ -29,13 +30,13 @@ function displayCoaster(array $rides): string {
     $coasterCard = "";
     foreach ($rides as $ride) {
         $coasterCard .= "<div class='coasterCard'>";
-        $coasterCard .= "<h3>Name: " . $ride['name'] . "</h3>";
-        $coasterCard .= "<p>Ride location: " . $ride['name'] . "</p>";
+        $coasterCard .= "<div class='namelocation'><h3>" . $ride['name'] . "</h3>";
+        $coasterCard .= "<p class='parkname'>". $ride['park'] . "</p></div>";
         $coasterCard .= '<img class="coasterimg" src="';
         $path = getImagePath($ride['img']);
         $coasterCard .= ($path . '" alt="Picture of ' . $ride['name'] . '.">');
-        $coasterCard .= "<p>Ride height: " . $ride['height'] . "m</p>";
-        $coasterCard .= "<p>Total inversions: " . $ride['inversions'] . "</p>";
+        $coasterCard .= "<div class='heightinversion'><p>Ride height: " . $ride['height'] . "m</p>";
+        $coasterCard .= "<p>Total inversions: " . $ride['inversions'] . "</p></div>";
         $coasterCard .= "</div>";
     }
     return $coasterCard;
