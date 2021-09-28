@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Fugaz One', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url("../images/rollercoaster-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  -ms-overflow-style: none;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding: 0;
+  scrollbar-width: none;
+}
+
+nav {
+  align-items: center;
+  background-color: #525662dd;
+  color: #ffffff;
+  display: flex;
+  font-weight: bolder;
+  height: 8vh;
+  justify-content: space-between;
+  padding: 2em 8%;
+  position: fixed;
+  width: 100%;
+  text-decoration: none;
+}
+
+.coasterCards {
+  margin: 8vh 0 0;
+  background-color: #d9e5f3;
+}
+
+.coasterCard {
+
+}
