@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Fugaz One', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url("../images/rollercoaster-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  -ms-overflow-style: none;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding: 0;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  padding: 0 17vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d9e5f3da;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+nav h1 {
+  color: #b61525;
+}
+
+nav a {
+  color: #1b72ab;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #b61525;
+}
+
+.coasterCards {
+  margin: 5vh 17vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  padding-bottom: 5vh;
+}
+
+.coasterCard {
+  background-color: #c0cce6;
+  padding: 5%;
+  border-radius: 5%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  border: solid #1b72ab;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.namelocation h3 {
+  color: #b61525;
+  font-size: 1.2rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+.coasterCard p {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p.parkname {
+  font-style: italic;
+  font-weight: bold;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.coasterCard img {
+  max-height: 100%;
+  max-width: 100%;
+  align-self: center;
+}
