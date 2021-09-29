@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Fugaz One', cursive;
+}
+
+html {
+  background-attachment: fixed;
+  background-image: url("../images/rollercoaster-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  -ms-overflow-style: none;
+  font-size: 16px;
+  margin: 0;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding: 0;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+nav {
+  align-items: center;
+  background-color: #d9e5f3da;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 10vh;
+  justify-items: center;
+  left: 0;
+  padding: 0 17vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.logo img {
+  align-content: center;
+  max-height: 8vh;
+  max-width: 8vh;
+}
+
+nav h1 {
+  color: #b61525;
+}
+
+nav a {
+  color: #1b72ab;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #b61525;
+}
+
+.coasterCards {
+  display: grid;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 5vh 17vh;
+  padding-bottom: 5vh;
+}
+
+.coasterCard {
+  background-color: #c0cce6;
+  border-radius: 5%;
+  border: solid #1b72ab;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  padding: 5%;
+}
+
+.namelocation h3 {
+  align-self: center;
+  color: #b61525;
+  font-size: 1.5rem;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.coasterCard p {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p.parkname {
+  font-style: italic;
+  font-weight: bold;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.coasterCard img {
+  align-self: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+footer {
+  color: #4D4C58;
+  padding: 0 17vh;
+}
