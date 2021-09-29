@@ -76,6 +76,7 @@ class functions extends TestCase
         //arrange
         $input = 746648.837;
         $this->expectException(TypeError::class);
+        
         //act
         $result = displayCoaster($input);
 
