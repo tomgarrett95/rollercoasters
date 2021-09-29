@@ -39,3 +39,20 @@ function displayCoaster(array $rides): string {
     }
     return $coasterCard;
 }
+
+function getAllParks(PDO $db): array {
+    $query = $db->prepare("SELECT `id`, `park`
+                                FROM `themeparks` 
+                                ORDER BY `themeparks`.`park`;");
+    $query->execute();
+    return $query->fetchAll();
+}
+
+function addNewCoaster(PDO $db, array $newCoaster)
+{
+    $query = $db->prepare(
+        'INSERT INTO `rides` (`name`, `location`, `img`, `height`, `inversions`)'
+        . ' VALUES (:name, :location, :img, :height, :inversions);'
+    );
+    return $query->execute($newCoaster);
+}
