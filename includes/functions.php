@@ -6,9 +6,7 @@ function fetchDB(PDO $db): array {
                                 LEFT JOIN `themeparks` 
                                 ON `rides`.`location` = `themeparks`.`id`
                                 ORDER BY `rides`.`name`;");
-
     $query->execute();
-
     return $query->fetchAll();
 }
 
@@ -17,7 +15,7 @@ function getImagePath(string $imagePath): string
     $path = '';
     $imageStartsWith = substr($imagePath, 0, strlen('http'));
     if (!$imageStartsWith) {
-        $path = 'https://via.placeholder.com/350/150';
+        $path = 'https://hotemoji.com/images/dl/n/roller-coaster-emoji-by-google.png';
     } elseif ($imageStartsWith === 'http') {
         $path = $imagePath;
     } else {
@@ -34,7 +32,7 @@ function displayCoaster(array $rides): string {
         $coasterCard .= "<p class='parkname'>". $ride['park'] . "</p></div>";
         $coasterCard .= '<img class="coasterimg" src="';
         $path = getImagePath($ride['img']);
-        $coasterCard .= ($path . '" alt="Picture of ' . $ride['name'] . '.">');
+        $coasterCard .= ($path . '" alt="Picture of ' . $ride['name'] . '">');
         $coasterCard .= "<div class='heightinversion'><p>Ride height: " . $ride['height'] . "m</p>";
         $coasterCard .= "<p>Total inversions: " . $ride['inversions'] . "</p></div>";
         $coasterCard .= "</div>";
