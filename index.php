@@ -10,7 +10,6 @@ require_once('includes/functions.php');
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/styles.css?v=<?php echo time();?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -29,6 +28,12 @@ require_once('includes/functions.php');
         echo displayCoaster($rides);
     ?>
 </main>
+
+<?php
+    if (isset($_GET['error']) && $_GET['error'] == 3) {
+        echo '<br><h2>Failed to delete from database.</h2><br>';
+    }
+?>
 
 <footer>
     <p>&copy; Tom Garrett 2021</p>

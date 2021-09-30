@@ -112,7 +112,17 @@ p.parkname {
   border-radius: 5%;
 }
 
-form {
+.deletediv {
+  padding: 0;
+  border: none;
+}
+
+.deletebutton {
+  font-family: 'Roboto Condensed', sans-serif;
+  border-color: #b61525;
+}
+
+.entryform {
   background-color: #c0cce6;
   border-radius: 5%;
   border: solid #1b72ab;
