@@ -48,7 +48,7 @@ function getAllParks(PDO $db): array {
     return $query->fetchAll();
 }
 
-function addNewCoaster(PDO $db, array $newCoaster)
+function addNewCoaster(PDO $db, array $newCoaster): bool
 {
     $query = $db->prepare(
         'INSERT INTO `rides` (`name`, `location`, `img`, `height`, `inversions`)'

@@ -52,7 +52,7 @@ require_once('includes/functions.php');
         </div>
         <div>
             <p><label for="height">Height(m):</label></p>
-            <input class="field" type="number" id="height" name="height" min="0" max="180" step="0.5" required>
+            <input class="field" type="number" id="height" name="height" min="0" max="180" step="0.1" required>
         </div>
         <div>
             <p><label for="inversions">Inversions:</label></p>
