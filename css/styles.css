@@ -73,20 +73,19 @@ a:active {
 
 .coasterCards {
   display: grid;
-  grid-column-gap: 5%;
-  grid-row-gap: 5%;
+  grid-column-gap: 5vh;
+  grid-row-gap: 5vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 5vh 17vh;
-  padding-bottom: 5vh;
 }
 
 .coasterCard {
   background-color: #c0cce6;
   border-radius: 5%;
   border: solid #1b72ab;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
   padding: 5%;
 }
 
@@ -110,11 +109,46 @@ p.parkname {
 
 .coasterCard img {
   align-self: center;
-  max-height: 100%;
-  max-width: 100%;
+  border-radius: 5%;
+}
+
+form {
+  background-color: #c0cce6;
+  border-radius: 5%;
+  border: solid #1b72ab;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 2%;
+  width: 25%;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.form h2 {
+  color: #b61525;
+}
+
+.form p {
+  margin: 0 0 0.2rem;
+}
+
+.field {
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+}
+
+.formbuttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 footer {
   color: #4D4C58;
   padding: 0 17vh;
+}
+
+.newfooter {
+  position: fixed;
+  bottom: 0;
 }
