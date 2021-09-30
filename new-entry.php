@@ -24,7 +24,7 @@ require_once('includes/functions.php');
     </div>
 </nav>
 
-<main class="form">
+<main class="entryform">
     <form method="post" action="newcoaster.php">
         <h2>Add a new rollercoaster</h2>
         <div>
