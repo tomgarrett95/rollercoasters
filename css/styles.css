@@ -132,15 +132,15 @@ p.parkname {
   margin: 5vh auto;
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  gap: 1rem;
 }
 
-.form h2 {
+form h2 {
   color: #b61525;
 }
 
-.form p {
-  margin: 0 0 0.2rem;
+form p {
+  margin: 1rem 0 0.2rem;
 }
 
 .field {
@@ -151,6 +151,7 @@ p.parkname {
 .formbuttons {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 2rem;
 }
 
 footer {
