@@ -37,10 +37,10 @@ function displayCoaster(array $rides): string {
         $coasterCard .= "<div class='heightinversion'><p>Ride height: " . $ride['height'] . "m</p>";
         $coasterCard .= "<p>Total inversions: " . $ride['inversions'] . "</p></div>";
         $coasterCard .= "<div class='deletediv'>";
-        $coasterCard .= "<form class='delete_form' action='deletecoaster.php' method='POST'>
-                            <input type='hidden' name='coaster_id' value=" . $ride['id'] . ">
-                            <input type='submit' class='deletebutton' name='delete' value='Remove'>
-                        </form></div>";
+        $coasterCard .= "<form class='delete_form' action='deletecoaster.php' method='POST'>";
+        $coasterCard .= "<input type='hidden' name='coaster_id' value=" . $ride['id'] . ">";
+        $coasterCard .= "<input type='submit' class='deletebutton' name='delete' value='Remove'>";
+        $coasterCard .= "</form></div>";
         $coasterCard .= "</div>";
     }
     return $coasterCard;
