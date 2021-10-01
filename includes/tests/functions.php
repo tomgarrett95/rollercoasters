@@ -44,14 +44,19 @@ class functions extends TestCase
 
     public function testDisplayCoasterNemesis() {
         //arrange
-        $input = ['name'=>'Nemesis', 'park'=>'Alton', 'img'=>'nemesis.jpeg', 'height'=>3.5, 'inversions'=>1];
+        $input = ['id'=> 1, 'name'=>'Nemesis', 'park'=>'Alton', 'img'=>'nemesis.jpeg', 'height'=>3.5, 'inversions'=>1];
         $expected = "<div class='coasterCard'>";
         $expected .= "<div class='namelocation'><h3>Nemesis</h3>";
         $expected .= "<p class='parkname'>Alton</p></div>";
         $expected .= '<img class="coasterimg" src="images/nemesis.jpeg" alt="Picture of Nemesis">';
         $expected .= "<div class='heightinversion'><p>Ride height: 3.5m</p>";
-        $expected .= "<p>Total inversions: 1</p></div>";
-        $expected .= "</div>";;
+        $expected .= "<p>Total inversions: 1</p>";
+        $expected .= "</div>";
+        $expected .= "<div class='deletediv'>";
+        $expected .= "<form class='delete_form' action='deletecoaster.php' method='POST'>";
+        $expected .= "<input type='hidden' name='coaster_id' value=1>";
+        $expected .= "<input type='submit' class='deletebutton' name='delete' value='Remove'>";
+        $expected .= "</form></div></div>";
 
         //act
         $result = displayCoaster([$input]);
